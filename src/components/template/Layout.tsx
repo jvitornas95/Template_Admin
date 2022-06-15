@@ -1,3 +1,4 @@
+import useAppData from "../../data/hook/useAppData";
 import { Conteudo } from "./Conteudo";
 import { MenuLateral } from "./MenuLateral";
 import { TopBar } from "./TopBar";
@@ -10,9 +11,11 @@ interface ILayoutProps {
 
 export function Layout({ title, subtitle, children }: ILayoutProps) {
 
+    const { theme } = useAppData();
+
     return (
         <div className={`
-            dark
+            ${theme}
             flex h-screen w-screen
         `}>
             <MenuLateral />
