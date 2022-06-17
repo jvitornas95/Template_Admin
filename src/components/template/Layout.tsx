@@ -15,7 +15,7 @@ export function Layout({ title, subtitle, children }: ILayoutProps) {
 
     return (
         <div className={`
-            ${theme}
+            ${theme} 
             flex h-screen w-screen
         `}>
             <MenuLateral />
